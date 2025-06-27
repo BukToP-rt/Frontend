@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 512px;
+    height: 512px;
+    border: 1px #000 solid ;
+    border-radius: 50%;
+    background-image: url('./srcClock/clockface.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 10px 10px #000,
+    inset 0 10px 10px #000,
+    0 10px 10px #000,
+    inset 0 10px 10px #000;
+    position: relative;
+    margin-bottom: 100px;   
+}
+
+.clock::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #5c4d4d;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.hours {
+    position: absolute;
+}
+
+.hour {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.hour:before {
+    content: '';
+    width: 8px;
+    height: 100px;
+    border-radius: 3px;
+    background-color: #000;
+    position: absolute;
+    z-index: 10;
+    transform-origin: 50px 50px;
+}
+
+.minutes {
+    position: absolute;
+}
+
+.minute {
+    width: 340px;
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.minute:before {
+    content: '';
+    width: 4px;
+    height: 170px;
+    border-radius: 3px;
+    background-color: #000;
+    position: absolute;
+    z-index: 11;
+}
+
+.seconds {
+    position: absolute;
+}
+
+.second {
+    width: 440px;
+    height: 440px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.second:before {
+    content: '';
+    width: 2px;
+    height: 260px;
+    border-radius: 3px;
+    background-color: #000;
+    position: absolute;
+    z-index: 12;
+}
+
+.action {
+    display: flex;
+    column-gap: 50px;
+}
+
+button {
+    padding: 40px;
+    font-size: 18px;
+    background-color: orange;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
